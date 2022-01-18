@@ -223,7 +223,6 @@ export default {
   sentry: {
     dsn: process.env.APP_SENTRY_DSN,
     disabled: isDevelopment,
-    publishRelease: true,
     sourceMapStyle: "source-map",
     config: {
       environment: process.env.NODE_ENV,
