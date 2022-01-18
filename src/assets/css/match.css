@@ -1,0 +1,177 @@
+.match__header__status{
+  /* flex-grow: 2; */
+  flex-basis: 110px;
+}
+.match__header__info{
+  display: flex;
+  flex-grow:10;
+}
+
+
+/* 매치 리스트 아이템 */
+.match {
+    font-size: 13px;
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+  }
+    /* 가장 먼저 진행된 매치 아이템 */
+    .match:last-of-type {
+      margin-bottom: 0;
+    }
+  /* 매치 헤더 */
+  .match__header{
+    display:flex;
+    align-content: stretch;
+  }
+  /* 승리 or 패배여부 막대 바 */
+  .match__header__bar {
+    width: 5px;
+    height: auto;
+  }
+  .match--win .match__header__bar {
+    background-color: #4dabf5;
+  }
+  .match--lose .match__header__bar {
+    background-color: #ed4b82;
+  }
+  .match--retire .match__header__bar{
+    background-color:grey;
+  }
+  .match__header__content{
+    display: flex;
+    flex-grow: 1;
+    height:100px;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+  }
+  .match__header__rank {
+    font-size: 32px;
+    text-align: center;
+    flex-basis: 80px;
+    flex-grow: 1;
+  }
+  .match--win .match__header__rank {
+    color: #4dabf5;
+  }
+  .match--lose .match__header__rank {
+    color: #ed4b82;
+  }
+  .match--retire .match__header__rank {
+    color: grey;
+  }
+  .match__header__track {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 450px;
+    flex-grow:2;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .match__header__used-item{
+    align-self: center;
+  }
+  .match__header__used-item__character {
+    width: 70px;
+  }
+  .match__header__used-item__kartbody {
+    margin-left: -18px;
+    width: 50px;
+  }
+  /* 해당 매치 헤더에서 승리 여부 */
+  .match__header__result {
+    font-size: 15px;
+  }
+  .match--win .match__header__result {
+    color: #4dabf5;
+  }
+  .match--lose .match__header__result {
+    color: #ed4b82;
+  }
+  /* .match__header__track > * {
+    margin-right: 1rem;
+  }
+  .match__header__track > *:last-child {
+    margin-right: 0rem;
+  } */
+  .match__header__content__center{
+    align-items: center;
+    display:flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  .match__header__content__right{
+    align-items: center;
+    display:flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+  .match__header__track__name{
+    flex-grow: 4;
+    flex-basis: 0%;
+    flex-shrink: 1;
+    text-align: center;
+    font-size: 16px;
+  }
+  .match__header__record{
+    flex-basis: 60px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    color:black;
+    font-weight: 500;
+  }
+  .match__retire{
+    font-size:1.5rem;
+  }
+  /* ri-arrow-up-s-line */
+  ::v-deep .ri-arrow-up{
+    width:100%;
+    height:100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='24px'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z' fill='rgba(50,115,220,1)'/%3E%3C/svg%3E");
+  }
+  /* ri-arrow-up-s-line */
+  ::v-deep .ri-arrow-down{
+    width:100%;
+    height:100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='24px'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z' fill='rgba(50,115,220,1)'/%3E%3C/svg%3E");
+  }
+  /* 해당 매치 헤더에서 유저 리스트 5번째부터 */
+  /* .match__header__players__name:nth-child(n + 5) {
+    margin-left: 24px;
+  } */
+  @media screen and (max-width: 750px) {
+    .match__header__track {
+      flex-direction: column;
+      flex-basis: 0px;
+    }
+    .match__header__record{
+      flex-basis: 0;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .match__header__used-item {
+      display: none;
+    }
+    .match__header__rank{
+      width:auto;
+      padding-left: 1rem;
+      font-size:1.5rem;
+    }
+    .card-header-icon{
+      padding-left: 0 !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .match__header__rank{
+      flex-grow: 0;
+      padding-left: 0rem;
+      flex-basis: 50px;
+    }
+    .match__header__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }

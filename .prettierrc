@@ -1,0 +1,12 @@
+{
+  "singleQuote": false,
+  "printWidth": 90,
+  "editor.formatOnSave": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "semi": true,
+  "arrowParens": "always",
+  "endOfLine":"auto"
+}
