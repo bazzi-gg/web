@@ -61,6 +61,7 @@ jobs:
           sed -i 's/process.env.APP_FIREBASE_MESSAGING_SENDER_ID/"${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}"/g' nuxt.config.js
           sed -i 's/process.env.APP_FIREBASE_PROJECT_ID/"${{ secrets.FIREBASE_PROJECT_ID }}"/g' nuxt.config.js
           sed -i 's/process.env.APP_FIREBASE_STORAGE_BUCKET/"${{ secrets.FIREBASE_STORAGE_BUCKET }}"/g' nuxt.config.js
+          sed -i 's/process.env.APP_GTM_ID/"${{ secrets.GTM_ID }}"/g' nuxt.config.js
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
