@@ -52,7 +52,7 @@ jobs:
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-      - name: Firebase Setup
+      - name: Secret Setup
         run: |
           sed -i 's/process.env.APP_FIREBASE_API_KEY/"${{ secrets.FIREBASE_API_KEY }}"/g' nuxt.config.js
           sed -i 's/process.env.APP_FIREBASE_APP_ID/"${{ secrets.FIREBASE_APP_ID }}"/g' nuxt.config.js
