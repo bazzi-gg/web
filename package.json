@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "22.01.18",
+  "version": "22.03.21",
   "private": true,
   "config": {
     "nuxt": {
