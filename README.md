@@ -36,5 +36,4 @@ $ npm run start
 PRs accepted.
 
 ## License
-
-None © 2021 bazzi.gg
+[MIT](./LICENSE)
