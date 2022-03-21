@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "nuxt",
     "dev-debug": "node --inspect node_modules\\nuxt\\bin\\nuxt",
-    "build": "nuxt build && rimraf .nuxt/dist/**/*.js.map",
+    "build": "nuxt build --dotenv .env.production && rimraf .nuxt/dist/**/*.js.map",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
